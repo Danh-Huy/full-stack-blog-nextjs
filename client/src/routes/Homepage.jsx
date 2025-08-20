@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom"
 import MainCategory from "../components/MainCategory"
+import FeaturePost from "../components/FeaturePost"
+import PostList from "../components/PostList"
 
 const Homepage = () => {
     return (
@@ -24,11 +26,12 @@ const Homepage = () => {
                 <MainCategory />
             </div>
             {/* FEATURED POSTS */}
-            <div>
-                <h2 className='text-xl font-semibold'>Featured Posts</h2>
-                <p className='text-gray-700'>Here are some featured posts.</p>
-            </div>
+            <FeaturePost />
             {/* POST LIST */}
+            <div className="">
+                <h1 className="my-8 text-2xl text-gray-600">Recent Posts</h1>
+                <PostList />
+            </div>
         </div>
     )
 }

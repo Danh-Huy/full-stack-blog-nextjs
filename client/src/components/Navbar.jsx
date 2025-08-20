@@ -25,7 +25,7 @@ const Navbar = () => {
                     {open ? "X" : "☰"}
                 </div>
                 {/* MOBILE LINK LIST */}
-                <div className={`w-full h-screen flex flex-col items-center absolute top-16 transition-full duration-300 ease-in-out bg-color: #e6e6ff font-medium gap-4
+                <div className={`w-full h-screen bg-[#e6e6ff] flex flex-col items-center absolute top-16 transition-full duration-300 ease-in-out font-medium gap-8
                     ${open ? 'right-0' : 'right-[-100%]'}`}
                 >
                     <Link to="/" className='p-4'>Home</Link>
@@ -43,7 +43,7 @@ const Navbar = () => {
                 </div>
             </div>
             {/* DESKTOP MENU */}
-            <div className="hidden md:flex items-center justify-between gap-2 lg:gap-12 font-medium">
+            <div className="hidden md:flex items-center justify-between gap-2 lg:gap-12 font-medium text-lg">
                 <Link to="/" className='p-4'>Home</Link>
                 <Link to="/trending" className='p-4'>Trending</Link>
                 <Link to="/most-popular" className='p-4'>Most Popular</Link>
