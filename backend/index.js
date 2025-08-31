@@ -12,6 +12,15 @@ app.use("/api/users", userRoutes)
 app.use("/api/posts", postRoutes)
 app.use("/api/comments", commentRoutes)
 
+app.use((err, req, res, next) => {
+  res.status(err.status || 500)
+  res.json({ 
+    message: err.message,
+    status: err.status,
+    stack: err.stack,
+  })
+})
+
 app.listen(3000, () => {
     connectDB()
   console.log("Server is running on port 3000")
